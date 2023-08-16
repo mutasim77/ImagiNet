@@ -7,11 +7,21 @@ const SearchField = () => {
     const [searchValue, setSearchValue] = useState('');
     const [isFocused, setIsFocused] = useState<boolean>(false);
 
-    const onHandleClick = async () => {
+    const fetchDataOrganized = async () => {
         await fetchData(searchValue, 1);
         setCurrentPage(1);
         setCurrentSearch(searchValue);
         setSearchValue('');
+    }
+
+    const onHandleClick = async () => {
+        fetchDataOrganized();
+    }
+
+    const onHandleKeyDown = async (evt: React.KeyboardEvent) => {
+        if (evt.key === 'Enter') {
+            fetchDataOrganized();
+        }
     }
 
     const handleFocus = () => setIsFocused(true);
@@ -30,6 +40,7 @@ const SearchField = () => {
                 placeholder='Search anything...'
                 onFocus={handleFocus}
                 onBlur={handleBlur}
+                onKeyDown={onHandleKeyDown}
             />
             {isFocused && (
                 <button
