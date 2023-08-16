@@ -1,0 +1,30 @@
+.gallery{
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .list-images{
+            gap: 15px;
+            max-width: 95%;
+            margin-top: 40px;
+            columns: 5 340px;
+            list-style: none;
+
+            .list-item{
+                display: flex;
+                cursor: pointer;
+                overflow: hidden;
+                position: relative;
+                margin-bottom: 14px;
+                border-radius: 7px;
+
+                > img {
+                    width: 100%;
+                    z-index: 2;
+                    position: relative;
+                }
+            }
+        }
+    }
+}

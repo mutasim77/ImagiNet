@@ -1,0 +1,29 @@
+.no-results-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+
+    .image-container {
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
+      
+      img {
+        width: 80%;
+      }
+    }
+  
+   .message {
+      max-width: 700px;
+      font-size: 18px;
+      text-align: center;
+      margin-bottom: 20px;
+  
+      .search-term {
+        font-weight: bold;
+      }
+    }
+  }
+  

@@ -1,0 +1,75 @@
+.header{
+    margin-top: 20px;
+    .nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo{
+        width: 90px;
+        height: 60px;
+        cursor: pointer;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .search-field{
+        display: flex;
+        position: relative;
+
+        input{
+            outline: none;
+            border: 1px solid #fff;
+            border-radius: 10px;
+            width: 525px;
+            height: 1.8em;
+            padding-left: 45px;
+            font-size: 1.4em;
+
+            &::placeholder{ 
+                font-size: .8em ;
+                opacity: .5;
+            }
+
+            &:focus{
+                background-color: #e7e1e1;
+            }
+        }
+
+        .search-btn{
+            outline: none;
+            border: none;
+            background-color: transparent;
+            position: absolute;
+            cursor: pointer;
+            top: 8px;
+            left: 13px;
+            font-size: 1.6em;
+        }
+
+        .close-btn{
+            position: absolute;
+            right: 11px;
+            top: 11px;
+            font-size: 1.3em;
+            cursor: pointer;
+            border: none;
+            background-color: transparent;
+        }       
+    }
+
+    .login-btn{
+        > button{
+            background-color: #c290fc;
+            padding: .7em 2em;
+            border: 1px solid #fff;
+            border-radius: 7px;
+            cursor: pointer;
+            font-weight: 700;
+            letter-spacing: 1.4px;
+        }
+    }   
+}
