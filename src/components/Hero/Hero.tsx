@@ -1,23 +1,27 @@
 import { useEffect, useState } from 'react';
+import SpiderMan from '../../assets/spiderman.jpeg';
+import Sky from '../../assets/sky.jpeg';
+import Bear from '../../assets/bear.jpeg';
+import Stars from '../../assets/stars.jpeg';
 
 import './Hero.scss';
 
 const data = [
     {
         id: 1,
-        image: '/src/assets/spiderman.jpeg'
+        image: <SpiderMan />
     },
     {
         id: 2,
-        image: '/src/assets/bear.jpeg'
+        image: <Sky />
     },
     {
         id: 3,
-        image: '/src/assets/sky.jpeg'
+        image: <Bear />
     },
     {
         id: 4,
-        image: '/src/assets/stars.jpeg'
+        image: <Stars />
     },
 ];
 
@@ -46,7 +50,7 @@ const Hero = () => {
                     </div>
                     <div className="hero-item">
                         <div className="image-container">
-                            <img src={data[currentSlide].image} />
+                            <img src={data[currentSlide].image.type} />
                         </div>
                     </div>
                 </div>
