@@ -1,0 +1,58 @@
+@import '../../styles/responsive.scss';
+
+.hero-section {
+    height: 67vh;   
+    margin-top: 100px;
+
+    @include phone{
+        height: 80vh;   
+        margin-top: 50px;
+    }
+        
+    .content {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        @include phone{
+            flex-direction: column-reverse;
+        }
+
+        .hero-item {    
+            @include phone{
+                text-align: center;
+            }
+
+            h1 {
+                font-size: 2em;
+                font-weight: 400;
+
+                 @include phone{
+                    margin-top: 30px;
+                }
+                // font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+            }
+
+            p{
+                margin-top: 20px;
+                letter-spacing: 1.5px;
+                color: #ccc;
+            }
+
+            .image-container{
+                width: 300px;
+                height: 400px;
+                
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 10px;
+                    box-shadow: 4px 5px 15px #c290fc;
+                }
+            }
+        }
+    }
+
+
+}

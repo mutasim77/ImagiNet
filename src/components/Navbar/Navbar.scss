@@ -1,15 +1,33 @@
+@import '../../styles/responsive.scss';
+
 .header{
     margin-top: 20px;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    background-color: #121212;
     .nav{
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        @include phone{
+            flex-direction: column;
+        }
+
     }
 
     .logo{
         width: 90px;
         height: 60px;
         cursor: pointer;
+        
+        @include phone{
+            margin-bottom: 10px;
+        }
+
         img{
             width: 100%;
             height: 100%;
@@ -20,6 +38,12 @@
         display: flex;
         position: relative;
 
+
+        @include phone{
+            width: 300px;
+            margin-right: 9px;
+         }
+
         input{
             outline: none;
             border: 1px solid #fff;
@@ -28,6 +52,11 @@
             height: 1.8em;
             padding-left: 45px;
             font-size: 1.4em;
+
+            @include phone{
+               width: 300px;
+               
+            }
 
             &::placeholder{ 
                 font-size: .8em ;
@@ -62,6 +91,10 @@
     }
 
     .login-btn{
+        @include phone{
+            display: none;
+        }
+
         > button{
             background-color: #c290fc;
             padding: .7em 2em;
